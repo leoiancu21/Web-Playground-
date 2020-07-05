@@ -19,3 +19,19 @@
 
 
 }
+
+
+.first-img{
+
+    box-shadow: black;
+    border-radius: 20px;
+
+}
+
+.first-img-blur{
+
+    box-shadow: black;
+    border-radius: 20px;
+    filter: blur(8px);
+    -webkit-filter: blur(8px); 
+}
