@@ -1,16 +1,40 @@
-body
-{
-	background:url('../images/nomonkeybg.jpeg') #1b8c1b66 ;
-	background-size: 100%;
-}
-.maincontainer
-{
+
+
+#modal {
+
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	transform: scale(1.5);
+	opacity: 0;
+	pointer-events: none;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100vw;
-	height: 100vh;
-	position: relative;
+
+}
+
+.dialogIsOpen #page-wrap {
+
+	-webkit-filter: blur(5px);
+	-webkit-transform: scale(0.9);
+
+}
+
+.dialogIsOpen #modal {
+	animation: jackInTheBox;
+	animation-duration: 0.7s ;
+	transform: scale(1);
+	opacity: 1;
+	pointer-events: auto;
+
+}
+
+#page-wrap, #modal {
+
+	transition: all 0.4s ease;
 
 }
 
@@ -27,8 +51,6 @@ body
 }
 .animcon
 {
-	background-color: white;
-
 	overflow: hidden;
 	/*overflow hidden because to keep the hand image hidden below*/
 	margin-top:20px;
@@ -104,17 +126,4 @@ input::placeholder
 	color: #5a5449;
 	font-weight: lighter;
 	margin-top: 40px;
-}
-
-.popup-login
-{
-
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	display: none;
-	justify-content: center;
-	align-items: center;
-
 }
