@@ -4,11 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
-  <link rel="stylesheet" type="text/scss" href="./css/modal-animation.scss">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="./node_modules/animate.css/animate.css">
   <script src="https://kit.fontawesome.com/3bef3ed85d.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -24,87 +21,81 @@
   <title>Home</title>
 </head>
 
-<body>
-  <div id="page-wrap">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item button is-rounded is-hovered is-info is-inverted" style="margin-top: 7px;"
-            href="index.html">
-            <i class="fas fa-home" style="color: hsl(204, 86%, 53%);"></i>
-          </a>
-          <span class="navbar-burger burger" data-target="navbarMenuHeroB">
-            <span> </span>
-            <span></span>
-            <span></span>
-          </span>
-        </div>
-        <di class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item">
-              Algorithms
-            </a>
-            <a class="navbar-item">
-              Examples
-            </a>
-            <a class="navbar-item">
-              Documentation
-            </a>
-            <span class="navbar-item">
-              <a class="button button-login is-link is-inverted">
-                <span>Login</span>
-              </a>
-            </span>
-            <span class="navbar-item">
-              <a class="button is-info is-inverted" id="Home">
-                <span>Register</span>
-              </a>
-            </span>
-          </div>
-      </div>
-    </nav>
+<body id="page-wrap">
+			
+		<div class="containerone">
 
-  </div>
+			<div class="row">
 
-    <div id="modal">
-      <div class="monkeylogin">
-        <div class="animcon" id="animcon">
-          <img id="hands" src="./images/hands.png">
-        </div>
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 
-        <div class="formcon">
-          <form>
-            <input type="email" id="mail" name="" onclick="openeye();" class="tb" placeholder="Email"
-              autocomplete="off" />
-            <br />
-            <br />
-            <input type="password" id="pwdbar" onclick="closeye();" name="pwd" class="tb" placeholder="Password" />
-            <br />
-            <br />
-            <input type="submit" id="login-button" name="" class="sbutton" value="L O G I N" />
-          </form>
-        </div>
+					<nav class="navbar">
+						<div class="container">
+							<div class="navbar-brand">
+								<a class="navbar-item button is-rounded is-hovered is-info is-inverted" style="margin-top: 7px;"
+									href="index.html">
+									<i class="fas fa-home" style="color: hsl(0, 0%, 0%);"></i>
+								</a>
+								<span class="navbar-burger burger" data-target="navbarMenuHeroB">
+									<span></span>
+									<span></span>
+									<span></span>
+								</span>
+							</div>
+							<div class="navbar-menu">
+								<div class="navbar-end">
+									<a class="navbar-item btn ">
+										Algorithms
+									</a>
+									<a class="navbar-item btn">
+										Examples
+									</a>
+									<a class="navbar-item btn">
+										Documentation
+									</a>
+									<span class="navbar-item">
+										<a class=" btn button button-login is-link is-inverted">
+											<span>Login</span>
+										</a>
+									</span>
+									<span class="navbar-item">
+										<a class="btn button is-info is-inverted" id="Home">
+											<span>Register</span>
+										</a>
+									</span>
+								</div>
+							</div>
+						</div>
+					</nav>
 
-      </div>
-    </div>
+				</div>
 
+			</div>
 
+		</div>
+
+		<div id="modal">
+			<div class="monkeylogin">
+				<div class="animcon" id="animcon">
+					<img id="hands" src="./images/hands.png">
+				</div>
+
+				<div class="formcon">
+					<form>
+						<input type="email" id="mail" name="" onclick="openeye();" class="tb" placeholder="Email"
+							autocomplete="off" />
+						<br />
+						<br />
+						<input type="password" id="pwdbar" onclick="closeye();" name="pwd" class="tb"
+							placeholder="Password" />
+						<br />
+						<br />
+						<input type="submit" id="login-button" name="" class="sbutton" value="L O G I N" />
+					</form>
+				</div>
+
+			</div>
+		</div>
 </body>
-
 <script type="text/javascript" src="script.js"></script>
-<script>
-  // Popup Login screen 
-
-  $('.button-login').click(function () {
-    $('body').toggleClass("dialogIsOpen");
-  });
-
-
-  // Close popup
-
-  $('#login-button').click(function () {
-    $('body').toggleClass("dialogIsOpen");
-  });
-</script>
-
 </html>
